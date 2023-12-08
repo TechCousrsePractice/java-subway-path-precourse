@@ -10,7 +10,7 @@ public class ViewValidation {
         try {
             return supplier.get();
         } catch (IllegalArgumentException e) {
-            throw new IllegalArgumentException(ErrorMessage.IS_NOT_FORMAT.getMessage());
+            throw new IllegalArgumentException(ErrorMessage.IS_NOT_INTEGER.getMessage());
         }
     }
     public int isMenuNumber(String enterMenu) {
@@ -38,19 +38,19 @@ public class ViewValidation {
     public void isStation(String enterStation) {
         String targetEnding = "역";
         if (!enterStation.endsWith(targetEnding)) {
-            throw new IllegalArgumentException(ErrorMessage.IS_NOT_FORMAT.getMessage());
+            throw new IllegalArgumentException(ErrorMessage.IS_NOT_STATION_FORMAT.getMessage());
         }
     }
 
     private void isEqualMenu(int menuNumber) {
         if(menuNumber != 1){
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException(ErrorMessage.IS_NOT_MENU_FORMAT.getMessage());
         }
     }
 
     private void isEqualFunction(int functionNumber) {
         if(functionNumber != 1 && functionNumber != 2){
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException(ErrorMessage.IS_NOT_STANDARD_FORMAT.getMessage());
         }
     }
 }

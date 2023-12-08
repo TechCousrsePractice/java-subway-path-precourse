@@ -12,4 +12,9 @@ public class ViewConstants {
     public static final String CHOICE_FUNCTION = "## 원하는 기능을 선택하세요." + System.lineSeparator();
     public static final String START_STATION = "## 출발역을 입력하세요.";
     public static final String END_STATION = "## 도착역을 입력하세요.";
+    public static final String INQUIRY_RESULT = "## 조회 결과";
+    public static final String SEPARATOR = "[INFO] ---";
+    public static final String RESULT_DISTANT = "[INFO] 총 거리: %dkm" + System.lineSeparator();
+    public static final String RESULT_TIME = "[INFO] 총 소요 시간: %d분" + System.lineSeparator();
+    public static final String RESULT_STATION = "[INFO] %s" + System.lineSeparator();
 }

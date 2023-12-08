@@ -1,5 +1,8 @@
 package subway.domain;
 
+import static subway.constants.global.NOT_FIND_STATION;
+import static subway.constants.global.PREFIX;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -22,5 +25,12 @@ public class StationRepository {
 
     public static void deleteAll() {
         stations.clear();
+    }
+
+    public static Station getStation(String stationName) {
+        return stations.stream()
+                .filter(station -> station.getName().equals(stationName))
+                .findFirst()
+                .orElseThrow(() -> new IllegalArgumentException(PREFIX + NOT_FIND_STATION));
     }
 }

@@ -2,10 +2,11 @@ package subway.view.constants;
 
 import static subway.constants.global.PREFIX;
 
-import org.mockito.internal.matchers.GreaterThan;
-
 public enum ErrorMessage {
-    IS_NOT_FORMAT("메뉴에 맞게 입력해주세요");
+    IS_NOT_INTEGER("숫자가 아닙니다."),
+    IS_NOT_MENU_FORMAT("1 혹은 Q만 입력하실 수 있습니다."),
+    IS_NOT_STANDARD_FORMAT("1,2 그리고 B만 입력하실 수 있습니다."),
+    IS_NOT_STATION_FORMAT("##역 형태로만 입력하실 수 있습니다.");
     private final String message;
     ErrorMessage(String message) {
         this.message = message;
